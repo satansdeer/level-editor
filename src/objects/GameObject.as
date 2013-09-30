@@ -6,7 +6,7 @@ import flash.text.TextField;
 
 public class GameObject extends Sprite
 	{
-		protected var oType:String;
+		public var oType:String;
 		public var selection:Sprite;
 		public var delegate:Object;
 
