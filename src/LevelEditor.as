@@ -14,7 +14,8 @@ package
 	import objects.Saw;
 	import objects.Tesla;
 	import objects.Wall;
-	
+
+    [SWF(backgroundColor="#000000", frameRate="100")]
 	public class LevelEditor extends Sprite
 	{
 		public var mapObjects:Array;
