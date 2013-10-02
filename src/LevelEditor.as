@@ -26,7 +26,25 @@ package
 			mapObjects = new Array();
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
-		
+
+        public function loadFromString(str:String):void{
+            var jsonMap:Object = JSON.parse(str);
+            var objects:Array = jsonMap["objects"];
+            for each (var obj:Object in objects){
+                createObject(obj);
+            }
+        }
+
+        protected function createObject(obj:Object):void{
+            switch(obj["type"]){
+                case "wall":
+                    addWall(obj["x"], obj["y"]);
+                break;
+                default:
+                break;
+            }
+        }
+
 		protected function onAddedToStage(event:Event):void
 		{
 			objectsLayer = new Sprite();

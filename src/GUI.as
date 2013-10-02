@@ -7,11 +7,15 @@ package
 import flash.events.Event;
 import flash.events.KeyboardEvent;
 	import flash.events.MouseEvent;
+import flash.events.ProgressEvent;
 import flash.filesystem.File;
 import flash.filesystem.FileMode;
 import flash.filesystem.FileStream;
+import flash.net.FileFilter;
+import flash.net.FileReference;
 import flash.ui.KeyLocation;
 	import flash.ui.Keyboard;
+import flash.utils.ByteArray;
 
 import objects.GameObject;
 
@@ -22,6 +26,9 @@ public class GUI extends Sprite
         private var scaleButton:PushButton;
         private var deleteButton:PushButton;
         private var serializeButton:PushButton;
+        private var loadFromFileButton:PushButton;
+
+        private var fileR:FileReference;
 
         private const MY_DEFAULT_EXTENSION:String = "json";
         private const VALID_EXTENSIONS_LIST:Array = ["json"];
@@ -37,11 +44,53 @@ public class GUI extends Sprite
             scaleButton = new PushButton(this, 100,0,"Scale",onClickScale);
             deleteButton = new PushButton(this, 200,0,"Delete",onClickDelete);
             serializeButton = new PushButton(this, 300,0,"Serialize",onClickSerialize);
+            loadFromFileButton = new PushButton(this, 400, 0, "Load File", onClickLoad);
 			addChild(rotateButton);
             addChild(scaleButton);
             addChild(deleteButton);
             addChild(serializeButton);
+            addChild(loadFromFileButton);
 		}
+
+        private function onClickLoad(event:Event):void {
+            fileR = new FileReference();
+            var imageFilter = new FileFilter("JSON", "*.json");
+            fileR.browse([imageFilter]);
+            fileR.addEventListener(Event.CANCEL, cancelHandler);
+            fileR.addEventListener(Event.SELECT, selectHandler);
+            fileR.addEventListener(ProgressEvent.PROGRESS, progressHandler);
+            fileR.addEventListener(Event.COMPLETE, completeHandler);
+        }
+
+    function selectHandler(e:Event):void{ // file selected
+        trace("selectHandler: "+fileR.name);
+        fileR.load(); // load it
+    }
+    function cancelHandler(e:Event):void { // file select canceled
+        trace("cancelHandler");
+    }
+    function progressHandler(e:ProgressEvent):void{ // progress event
+        trace("progressHandler: loaded="+e.bytesLoaded+" total="+e.bytesTotal);
+    }
+    function completeHandler(e:Event):void{ // file loaded
+        trace("completeHandler: " + fileR.name);
+        var mapString:String = fileR.data.toString();
+        delegate.loadFromString(mapString);
+    }
+
+    public static function encode(ba:ByteArray):String {
+        var origPos:uint = ba.position;
+        var result:Array = new Array();
+
+        for (ba.position = 0; ba.position < ba.length - 1; )
+            result.push(ba.readShort());
+
+        if (ba.position != ba.length)
+            result.push(ba.readByte() << 8);
+
+        ba.position = origPos;
+        return String.fromCharCode.apply(null, result);
+    }
 
         private function onClickSerialize(event:Event):void {
             docsDir = File.desktopDirectory; docsDir.browseForSave("Save As");
@@ -65,15 +114,20 @@ public class GUI extends Sprite
         private function getStringMapDescription():String {
             var mapWidth:int = 100;
             var mapHeight:int = 100;
-            var mapString:String = '{ "map":{"width":' +mapWidth+ ', "height":' +mapHeight+ '}';
+            var isFirstElement:Boolean = true;
+            var mapString:String = '{ "map":{"width":' +mapWidth+ ', "height":' +mapHeight+ '}, "objects":[';
             for each (var object:GameObject in delegate.mapObjects){
                 var objWidth:int = Math.ceil(object.width* object.scaleX);
                 var objHeight:int = Math.ceil(object.height* object.scaleY);
-                mapString += ',"'+object.oType+'":'+'{"x":'+object.x+',"y":'+object.y+',"width":'+objWidth+
+                if(!isFirstElement){
+                    mapString += ",";
+                }
+                isFirstElement = false;
+                mapString += '{"type":"'+object.oType+'", "x":'+object.x+',"y":'+object.y+',"width":'+objWidth+
                         ',"height":'+objHeight+',"rotation":'+object.rotation;
                 mapString+='}';
             }
-            mapString+='}';
+            mapString+=']}';
             return mapString;
         }
 

@@ -4,19 +4,17 @@
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.as" afterPath="$PROJECT_DIR$/src/GUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/GameObject.as" afterPath="$PROJECT_DIR$/src/objects/GameObject.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="$PROJECT_DIR$/bin-debug/LevelEditor-app.xml" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039627736" ignored="false" />
-    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380556067214" ignored="false" />
-    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380125090994" ignored="false" />
+    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380560306576" ignored="false" />
+    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380720776452" ignored="false" />
     <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380555418738" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380040166081" ignored="false" />
-    <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380551703554" ignored="false" />
+    <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380719611273" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +29,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -68,6 +65,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -77,10 +75,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LevelEditor.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="LevelEditor.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="174" column="62" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.0">
+            <state line="40" column="48" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.8557692">
               <folding />
             </state>
           </provider>
@@ -149,10 +147,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GUI.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="36" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.55528843">
+            <state line="121" column="58" selection-start="4676" selection-end="4676" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -182,9 +180,9 @@
         <option value="$PROJECT_DIR$/src/objects/Saw.as" />
         <option value="$PROJECT_DIR$/src/objects/Tesla.as" />
         <option value="$PROJECT_DIR$/src/objects/Wall.as" />
-        <option value="$PROJECT_DIR$/src/LevelEditor.as" />
         <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
         <option value="$PROJECT_DIR$/src/GUI.as" />
+        <option value="$PROJECT_DIR$/src/LevelEditor.as" />
       </list>
     </option>
   </component>
@@ -613,7 +611,9 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="2" />
+    </breakpoint-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -711,13 +711,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="174" column="62" selection-start="4272" selection-end="4272" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="14" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
@@ -727,7 +720,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/GUI.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="36" selection-start="2588" selection-end="2588" vertical-scroll-proportion="0.55528843">
+        <state line="121" column="58" selection-start="4676" selection-end="4676" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="48" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.8557692">
           <folding />
         </state>
       </provider>
