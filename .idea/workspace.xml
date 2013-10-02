@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.as" afterPath="$PROJECT_DIR$/src/GUI.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380560306576" ignored="false" />
-    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380720776452" ignored="false" />
+    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380722418762" ignored="false" />
     <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380555418738" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380040166081" ignored="false" />
@@ -78,7 +75,7 @@
       <file leaf-file-name="LevelEditor.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="48" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.8557692">
+            <state line="165" column="58" selection-start="4467" selection-end="4467" vertical-scroll-proportion="0.5480769">
               <folding />
             </state>
           </provider>
@@ -727,7 +724,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="48" selection-start="1080" selection-end="1080" vertical-scroll-proportion="0.8557692">
+        <state line="165" column="58" selection-start="4467" selection-end="4467" vertical-scroll-proportion="0.5480769">
           <folding />
         </state>
       </provider>

@@ -20,6 +20,7 @@ package
 		public var mapObjects:Array;
 		private var objectsLayer:Sprite;
 		private var guiLayer:Sprite;
+        private const constSize:Number = 40;
 		
 		public function LevelEditor()
 		{
@@ -38,7 +39,7 @@ package
         protected function createObject(obj:Object):void{
             switch(obj["type"]){
                 case "wall":
-                    addWall(obj["x"], obj["y"]);
+                    addWall(obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
                 break;
                 default:
                 break;
@@ -101,61 +102,68 @@ package
 			}
 		}
 		
-		private function addTesla(mouseX:Number, mouseY:Number):void
+		private function addTesla(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var tesla:Tesla = new Tesla("tesla");
 			tesla.x = mouseX;
 			tesla.y = mouseY;
+            tesla.rotation = rot;
 			tesla.delegate = this;
 			mapObjects.push(tesla);
 			objectsLayer.addChild(tesla);
 		}
 		
-		private function addButton(mouseX:Number, mouseY:Number):void
+		private function addButton(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var button:Button = new Button("button");
 			button.x = mouseX;
 			button.y = mouseY;
+            button.rotation = rot;
 			button.delegate = this;
 			mapObjects.push(button);
 			objectsLayer.addChild(button);
 		}
 		
-		private function addDoor(mouseX:Number, mouseY:Number):void
+		private function addDoor(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var door:Door = new Door("door");
 			door.x = mouseX;
 			door.y = mouseY;
+            door.rotation = rot;
 			door.delegate = this;
 			mapObjects.push(door);
 			objectsLayer.addChild(door);
 		}
 		
-		private function addSaw(mouseX:Number, mouseY:Number):void
+		private function addSaw(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var saw:Saw = new Saw("saw");
 			saw.x = mouseX;
 			saw.y = mouseY;
+            saw.rotation = rot;
 			saw.delegate = this;
 			mapObjects.push(saw);
 			objectsLayer.addChild(saw);
 		}
 		
-		private function addMaul(mouseX:Number, mouseY:Number):void
+		private function addMaul(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var maul:Maul = new Maul("maul");
 			maul.x = mouseX;
 			maul.delegate = this;
 			maul.y = mouseY;
+            maul.rotation = rot;
 			mapObjects.push(maul);
 			objectsLayer.addChild(maul);
 		}
 		
-		private function addWall(mouseX:Number, mouseY:Number):void
+		private function addWall(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var wall:Wall = new Wall("wall");
 			wall.x = mouseX;
 			wall.y = mouseY;
+            wall.rotation = rot;
+            wall.scaleX = wall.scaleY = objSize;
 			wall.delegate = this;
 			mapObjects.push(wall);
 			objectsLayer.addChild(wall);
