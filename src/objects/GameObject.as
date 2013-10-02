@@ -9,6 +9,7 @@ public class GameObject extends Sprite
 		public var oType:String;
 		public var selection:Sprite;
 		public var delegate:Object;
+        public var id:int;
 
 		public var selected:Boolean;
 

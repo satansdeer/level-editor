@@ -29,6 +29,11 @@ package
 		}
 
         public function loadFromString(str:String):void{
+            for each(var object:GameObject in mapObjects){
+                object.deleteSelf();
+                this.objectsLayer.removeChild(object);
+            }
+            mapObjects = new Array;
             var jsonMap:Object = JSON.parse(str);
             var objects:Array = jsonMap["objects"];
             for each (var obj:Object in objects){
@@ -39,7 +44,22 @@ package
         protected function createObject(obj:Object):void{
             switch(obj["type"]){
                 case "wall":
-                    addWall(obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    addWall(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    break;
+                case "maul":
+                    addMaul(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    break;
+                case "tesla":
+                    addTesla(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    break;
+                case "saw":
+                    addSaw(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    break;
+                case "door":
+                    addDoor(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
+                    break;
+                case "button":
+                    addButton(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
                 break;
                 default:
                 break;
@@ -75,34 +95,51 @@ package
 			
 			stage.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
 		}
-		
+
+        protected function uniqueId():int{
+            var result:int = mapObjects.length;
+            while(isIdAlreadyUsed(result)){
+                result++;
+            }
+            return result;
+        }
+
+        protected function isIdAlreadyUsed(id:int):Boolean{
+            for each (var obj:GameObject in mapObjects){
+                if(obj.id == id){
+                    return true;
+                }
+            }
+            return false;
+        }
+
 		protected function onItemSelect(event:ContextMenuEvent):void
 		{
 			switch(event.target.caption){
 				case "Add wall":
-					addWall(stage.mouseX, stage.mouseY);
+					addWall(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				case "Add maul":
-					addMaul(stage.mouseX, stage.mouseY);
+					addMaul(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				case "Add saw":
-					addSaw(stage.mouseX, stage.mouseY);
+					addSaw(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				case "Add door":
-					addDoor(stage.mouseX, stage.mouseY);
+					addDoor(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				case "Add button":
-					addButton(stage.mouseX, stage.mouseY);
+					addButton(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				case "Add tesla":
-					addTesla(stage.mouseX, stage.mouseY);
+					addTesla(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
 				default:
 					break;
 			}
 		}
 		
-		private function addTesla(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addTesla(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var tesla:Tesla = new Tesla("tesla");
 			tesla.x = mouseX;
@@ -113,7 +150,7 @@ package
 			objectsLayer.addChild(tesla);
 		}
 		
-		private function addButton(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addButton(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var button:Button = new Button("button");
 			button.x = mouseX;
@@ -124,7 +161,7 @@ package
 			objectsLayer.addChild(button);
 		}
 		
-		private function addDoor(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addDoor(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var door:Door = new Door("door");
 			door.x = mouseX;
@@ -135,7 +172,7 @@ package
 			objectsLayer.addChild(door);
 		}
 		
-		private function addSaw(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addSaw(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var saw:Saw = new Saw("saw");
 			saw.x = mouseX;
@@ -146,22 +183,24 @@ package
 			objectsLayer.addChild(saw);
 		}
 		
-		private function addMaul(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addMaul(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var maul:Maul = new Maul("maul");
 			maul.x = mouseX;
 			maul.delegate = this;
 			maul.y = mouseY;
             maul.rotation = rot;
+            maul.id = id;
 			mapObjects.push(maul);
 			objectsLayer.addChild(maul);
 		}
 		
-		private function addWall(mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
+		private function addWall(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
 		{
 			var wall:Wall = new Wall("wall");
 			wall.x = mouseX;
 			wall.y = mouseY;
+            wall.id = id;
             wall.rotation = rot;
             wall.scaleX = wall.scaleY = objSize;
 			wall.delegate = this;

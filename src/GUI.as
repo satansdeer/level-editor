@@ -124,7 +124,7 @@ public class GUI extends Sprite
                 }
                 isFirstElement = false;
                 mapString += '{"type":"'+object.oType+'", "x":'+object.x+',"y":'+object.y+',"width":'+objWidth+
-                        ',"height":'+objHeight+',"rotation":'+object.rotation;
+                        ',"height":'+objHeight+',"rotation":'+object.rotation + ', "id":'+object.id;
                 mapString+='}';
             }
             mapString+=']}';
