@@ -72,6 +72,7 @@ import flash.events.ContextMenuEvent;
 
 		protected function onAddedToStage(event:Event):void
 		{
+            stage.addEventListener(MouseEvent.MOUSE_UP, onStageClick);
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.align = StageAlign.TOP_LEFT;
 			objectsLayer = new Sprite();
@@ -106,6 +107,10 @@ import flash.events.ContextMenuEvent;
 			
 			stage.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
 		}
+
+        private function onStageClick(event:MouseEvent):void {
+            deselectAll();
+        }
 
         protected function uniqueId():int{
             var result:int = mapObjects.length;

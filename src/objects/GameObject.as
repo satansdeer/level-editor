@@ -41,6 +41,8 @@ public class GameObject extends Sprite
 
     private function onMouseUp(event:MouseEvent):void {
         stopDrag();
+        event.stopPropagation();
+        event.stopImmediatePropagation();
     }
 
         public function deleteSelf():void{
@@ -58,6 +60,7 @@ public class GameObject extends Sprite
 		public function deselect():void{
 			selected = false;
             rotating = false;
+            scaling = false;
 			selection.graphics.clear();
 		}
 		
