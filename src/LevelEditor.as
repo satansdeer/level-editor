@@ -1,7 +1,8 @@
 package
 {
 	import flash.display.Sprite;
-	import flash.events.ContextMenuEvent;
+import flash.display.StageScaleMode;
+import flash.events.ContextMenuEvent;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
 	import flash.ui.ContextMenu;
@@ -70,6 +71,7 @@ package
 
 		protected function onAddedToStage(event:Event):void
 		{
+            stage.scaleMode = StageScaleMode.NO_SCALE;
 			objectsLayer = new Sprite();
 			guiLayer = new Sprite();
 			addChild(objectsLayer);
@@ -89,6 +91,11 @@ package
 				new ContextMenuItem("Add door"),
 				new ContextMenuItem("Add button"),
 				new ContextMenuItem("Add tesla"),
+                new ContextMenuItem("rotate", true),
+                new ContextMenuItem("scale"),
+                new ContextMenuItem("delete"),
+                new ContextMenuItem("save"),
+                new ContextMenuItem("load"),
 			]
 			for each (var obj:ContextMenuItem in contextMenu.items) 
 			{
@@ -139,6 +146,21 @@ package
 				case "Add tesla":
 					addTesla(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
+                case "rotate":
+                    gui.onClickRotate();
+                    break;
+                case "scale":
+                    gui.onClickScale();
+                    break;
+                case "delete":
+                    gui.onClickDelete();
+                    break;
+                case "save":
+                    gui.onClickSerialize();
+                    break;
+                case "load":
+                    gui.onClickLoad();
+                    break;
 				default:
 					break;
 			}

@@ -46,19 +46,9 @@ public class GUI extends Sprite
 			super();
             _stage = stg;
 			stg.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
-			rotateButton = new PushButton(this, 0,0,"Rotate",onClickRotate);
-            scaleButton = new PushButton(this, 100,0,"Scale",onClickScale);
-            deleteButton = new PushButton(this, 200,0,"Delete",onClickDelete);
-            serializeButton = new PushButton(this, 300,0,"Serialize",onClickSerialize);
-            loadFromFileButton = new PushButton(this, 400, 0, "Load File", onClickLoad);
-			addChild(rotateButton);
-            addChild(scaleButton);
-            addChild(deleteButton);
-            addChild(serializeButton);
-            addChild(loadFromFileButton);
 		}
 
-        private function onClickLoad(event:Event):void {
+        public function onClickLoad():void {
             fileR = new FileReference();
             var imageFilter = new FileFilter("JSON", "*.json");
             fileR.browse([imageFilter]);
@@ -98,7 +88,7 @@ public class GUI extends Sprite
         return String.fromCharCode.apply(null, result);
     }
 
-        private function onClickSerialize(event:Event):void {
+        public function onClickSerialize():void {
             docsDir = File.desktopDirectory; docsDir.browseForSave("Save As");
             docsDir.addEventListener(Event.SELECT, mySaveHandler);
         }
@@ -147,11 +137,11 @@ public class GUI extends Sprite
             return fileDef.split(".")[0] + "." + MY_DEFAULT_EXTENSION;
         }
 
-        private function onClickDelete(event:MouseEvent):void {
+        public function onClickDelete():void {
              delegate.deleteSelected();
         }
 
-        private function onClickScale(event:MouseEvent):void {
+        public function onClickScale():void {
             delegate.scaleSelected();
         }
 		
@@ -174,13 +164,13 @@ public class GUI extends Sprite
 			}
 		}
 		
-		private function onClickRotate(event:MouseEvent):void
+		public function onClickRotate():void
 		{
 			delegate.rotateSelected();
 		}
 
     public function openMapWindow():void {
-        var mapWindow:Window = new Window(this);
+        var mapWindow:Window = new Window(_stage);
         var mW = _stage.stageWidth;
         var mH = _stage.stageHeight;
         var mapWidth:TextArea = new TextArea(mapWindow,0,0,mW.toString());
@@ -193,7 +183,18 @@ public class GUI extends Sprite
     }
 
     private function onMapClick(event:MouseEvent):void {
-        removeChild(_currentWindow);
+        _stage.stageWidth = 100;
+        _stage.stageHeight = 100;
+        updateButtons();
+        _stage.removeChild(_currentWindow);
+    }
+
+    private function updateButtons():void {
+        rotateButton.y = 0;
+        scaleButton.y = 0;
+        deleteButton.y = 0;
+        serializeButton.y = 0;
+        loadFromFileButton.y = 0;
     }
 }
 }
