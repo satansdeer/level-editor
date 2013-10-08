@@ -108,8 +108,8 @@ public class GUI extends Sprite
         }
 
         private function getStringMapDescription():String {
-            var mapWidth:int = 100;
-            var mapHeight:int = 100;
+            var mapWidth:int = _stage.stageWidth;
+            var mapHeight:int = _stage.stageHeight;
             var isFirstElement:Boolean = true;
             var mapString:String = '{ "map":{"width":' +mapWidth+ ', "height":' +mapHeight+ '}, "objects":[';
             for each (var object:GameObject in delegate.mapObjects){
@@ -190,11 +190,7 @@ public class GUI extends Sprite
     }
 
     private function updateButtons():void {
-        rotateButton.y = 0;
-        scaleButton.y = 0;
-        deleteButton.y = 0;
-        serializeButton.y = 0;
-        loadFromFileButton.y = 0;
+
     }
 }
 }

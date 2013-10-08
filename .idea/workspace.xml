@@ -4,12 +4,10 @@
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.as" afterPath="$PROJECT_DIR$/src/GUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249111895" ignored="false" />
+    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249313555" ignored="false" />
     <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249176812" ignored="false" />
     <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380555418738" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
@@ -76,10 +74,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LevelEditor.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LevelEditor.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="136" column="102" selection-start="4340" selection-end="4340" vertical-scroll-proportion="0.5788235">
+            <state line="136" column="102" selection-start="4340" selection-end="4340" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#11#39#0" expanded="true" />
               </folding>
@@ -150,10 +148,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GUI.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GUI.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/GUI.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="50" column="8" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
+            <state line="192" column="8" selection-start="6825" selection-end="6825" vertical-scroll-proportion="0.68235296">
               <folding>
                 <element signature="e#11#51#0" expanded="true" />
               </folding>
@@ -186,8 +184,8 @@
         <option value="$PROJECT_DIR$/src/objects/Tesla.as" />
         <option value="$PROJECT_DIR$/src/objects/Maul.as" />
         <option value="$PROJECT_DIR$/src/objects/Button.as" />
-        <option value="$PROJECT_DIR$/src/GUI.as" />
         <option value="$PROJECT_DIR$/src/LevelEditor.as" />
+        <option value="$PROJECT_DIR$/src/GUI.as" />
       </list>
     </option>
   </component>
@@ -535,7 +533,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.45405406" order="2" side_tool="true" content_ui="tabs" />
@@ -724,20 +722,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.as">
+    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="50" column="8" selection-start="1345" selection-end="1345" vertical-scroll-proportion="0.0">
+        <state line="136" column="102" selection-start="4340" selection-end="4340" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#11#51#0" expanded="true" />
+            <element signature="e#11#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
+    <entry file="file://$PROJECT_DIR$/src/GUI.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="136" column="102" selection-start="4340" selection-end="4340" vertical-scroll-proportion="0.5788235">
+        <state line="192" column="8" selection-start="6825" selection-end="6825" vertical-scroll-proportion="0.68235296">
           <folding>
-            <element signature="e#11#39#0" expanded="true" />
+            <element signature="e#11#51#0" expanded="true" />
           </folding>
         </state>
       </provider>
