@@ -22,6 +22,7 @@ package
 		private var objectsLayer:Sprite;
 		private var guiLayer:Sprite;
         private const constSize:Number = 40;
+        private var gui:GUI;
 		
 		public function LevelEditor()
 		{
@@ -74,7 +75,7 @@ package
 			addChild(objectsLayer);
 			addChild(guiLayer);
 			
-			var gui:GUI = new GUI(stage);
+			gui = new GUI(stage);
 			gui.delegate = this;
 			guiLayer.addChild(gui);
 			
@@ -117,6 +118,9 @@ package
 		protected function onItemSelect(event:ContextMenuEvent):void
 		{
 			switch(event.target.caption){
+                case "Set map size":
+                    gui.openMapWindow();
+                    break;
 				case "Add wall":
 					addWall(uniqueId(),stage.mouseX, stage.mouseY);
 					break;
