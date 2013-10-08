@@ -24,26 +24,32 @@ public class GameObject extends Sprite
 			addChild(selection);
 			oType = objType;
 			draw(width, height);
-			addEventListener(MouseEvent.CLICK, onClick);
+            addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+            addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
 		}
+
+    private function onMouseDown(event:MouseEvent):void {
+        if(!selected){
+            delegate.deselectAll();
+            selected = true;
+            drawSelection();
+        }else{
+
+        }
+        startDrag();
+    }
+
+    private function onMouseUp(event:MouseEvent):void {
+        stopDrag();
+    }
 
         public function deleteSelf():void{
-            removeEventListener(MouseEvent.CLICK, onClick);
+            removeEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+            removeEventListener(MouseEvent.MOUSE_UP, onMouseUp);
         }
-
-		protected function onClick(event:MouseEvent):void
-		{
-			if(!selected){
-				drawSelection();
-			}else{
-				
-			}
-		}
 		
 		private function drawSelection():void
 		{
-			delegate.deselectAll();
-			selected = true;
 			selection.graphics.endFill();
 			selection.graphics.lineStyle(2,0x0000ff);
 			selection.graphics.drawRect(-width/2, -height/2, width,height);
