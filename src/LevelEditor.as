@@ -1,6 +1,7 @@
 package
 {
 	import flash.display.Sprite;
+import flash.display.StageAlign;
 import flash.display.StageScaleMode;
 import flash.events.ContextMenuEvent;
 	import flash.events.Event;
@@ -72,6 +73,7 @@ import flash.events.ContextMenuEvent;
 		protected function onAddedToStage(event:Event):void
 		{
             stage.scaleMode = StageScaleMode.NO_SCALE;
+            stage.align = StageAlign.TOP_LEFT;
 			objectsLayer = new Sprite();
 			guiLayer = new Sprite();
 			addChild(objectsLayer);
