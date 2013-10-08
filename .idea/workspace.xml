@@ -4,18 +4,18 @@
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/GameObject.as" afterPath="$PROJECT_DIR$/src/objects/GameObject.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249313555" ignored="false" />
     <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381250748333" ignored="false" />
-    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381250900248" ignored="false" />
+    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381251460300" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380040166081" ignored="false" />
     <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381244678014" ignored="false" />
     <file path="/Saw.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380727923584" ignored="false" />
+    <file path="$PROJECT_DIR$/bin-debug/LevelEditor-app.xml" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381251257053" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,7 +90,7 @@
       <file leaf-file-name="GameObject.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="28" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.6141176">
+            <state line="58" column="53" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.15529412">
               <folding />
             </state>
           </provider>
@@ -737,7 +737,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="28" selection-start="1619" selection-end="1619" vertical-scroll-proportion="0.6141176">
+        <state line="58" column="53" selection-start="1570" selection-end="1570" vertical-scroll-proportion="0.15529412">
           <folding />
         </state>
       </provider>

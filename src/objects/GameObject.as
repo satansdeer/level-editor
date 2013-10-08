@@ -54,7 +54,8 @@ public class GameObject extends Sprite
 		{
 			selection.graphics.endFill();
 			selection.graphics.lineStyle(2,0x0000ff);
-			selection.graphics.drawRect(-width/2, -height/2, width,height);
+			selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
+            trace(width + " " + height);
 		}
 		
 		public function deselect():void{
@@ -69,7 +70,7 @@ public class GameObject extends Sprite
 				selection.graphics.clear();
 				selection.graphics.endFill();
 				selection.graphics.lineStyle(2,0xff0000);
-				selection.graphics.drawRect(-width/2, -width/2, width,height);
+                selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
                 rotating = true;
                 scaling = false;
 			}
@@ -80,7 +81,7 @@ public class GameObject extends Sprite
             selection.graphics.clear();
             selection.graphics.endFill();
             selection.graphics.lineStyle(2,0x00ff00);
-            selection.graphics.drawRect(-width/2, -width/2, width,height);
+                selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
             scaling = true;
             rotating = false;
             }
