@@ -12,8 +12,8 @@ package objects
 		}
 		
 		override public function draw(width, height):void{
-			graphics.beginFill(0x009999);
-			graphics.drawCircle(0,0,width/2);
+            view.graphics.beginFill(0x009999);
+            view.graphics.drawCircle(0,0,width/2);
             textfield = new TextField();
 			textfield.text = "MAUL";
             textfield.textColor = 0xffffff;
@@ -22,7 +22,7 @@ package objects
             textfield.x = -width/2;
             textfield.height = 14;
             textfield.mouseEnabled = false;
-            addChild(textfield);
+            view.addChild(textfield);
 		}
 	}
 }

@@ -12,6 +12,7 @@ public class GameObject extends Sprite
 	{
 		public var oType:String;
 		public var selection:Sprite;
+        public var view:Sprite = new Sprite();
 		public var delegate:Object;
         public var id:int = 0;
         public var connectedObject:GameObject;
@@ -34,6 +35,7 @@ public class GameObject extends Sprite
 			selection = new Sprite();
 			addChild(selection);
             addChild(pathSprite);
+            addChild(view);
 			oType = objType;
 			draw(width, height);
             addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
@@ -114,14 +116,14 @@ public class GameObject extends Sprite
 		{
 			selection.graphics.endFill();
 			selection.graphics.lineStyle(2,0x0000ff);
-			selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
+			selection.graphics.drawRect(-view.width/2/scaleX, -view.height/2/scaleY, view.width/scaleX,view.height/scaleY);
 		}
 
     public function drawChooseFriendObject():void
     {
         selection.graphics.endFill();
         selection.graphics.lineStyle(4,0xff00ff);
-        selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
+        selection.graphics.drawRect(-view.width/2/scaleX, -view.height/2/scaleY, view.width/scaleX,view.height/scaleY);
     }
 		
 		public function deselect():void{
@@ -136,7 +138,7 @@ public class GameObject extends Sprite
 				selection.graphics.clear();
 				selection.graphics.endFill();
 				selection.graphics.lineStyle(2,0xff0000);
-                selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
+                selection.graphics.drawRect(-view.width/2/scaleX, -view.height/2/scaleY, view.width/scaleX,view.height/scaleY);
                 rotating = true;
                 scaling = false;
 			}
@@ -147,7 +149,7 @@ public class GameObject extends Sprite
             selection.graphics.clear();
             selection.graphics.endFill();
             selection.graphics.lineStyle(2,0x00ff00);
-            selection.graphics.drawRect(-width/2/scaleX, -height/2/scaleY, width/scaleX,height/scaleY);
+            selection.graphics.drawRect(-view.width/2/scaleX, -view.height/2/scaleY, view.width/scaleX,view.height/scaleY);
             scaling = true;
             rotating = false;
             }
@@ -236,8 +238,8 @@ public class GameObject extends Sprite
         }
 		
 		public function draw(width, height):void{
-			graphics.beginFill(0x00ff00);
-			graphics.drawCircle(0,0,width/2);
+            view.graphics.beginFill(0x00ff00);
+            view.graphics.drawCircle(0,0,width/2);
 		}
 
     public function setConnectedObject(obj1:GameObject):void {

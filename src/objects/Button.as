@@ -13,8 +13,8 @@ public class Button extends GameObject
 		}
 		
 		override public function draw(width, height):void{
-			graphics.beginFill(0x009900);
-			graphics.drawCircle(0,0,width/2);
+            view.graphics.beginFill(0x009900);
+            view.graphics.drawCircle(0,0,width/2);
             textfield = new TextField();
 			textfield.text = "BUTTON";
             textfield.textColor = 0xffffff;
@@ -23,7 +23,7 @@ public class Button extends GameObject
             textfield.x = -width/2;
             textfield.height = 14;
             textfield.mouseEnabled = false;
-            addChild(textfield);
+            view.addChild(textfield);
 		}
 	}
 }

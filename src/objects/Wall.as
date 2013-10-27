@@ -10,8 +10,8 @@ package objects
 		}
 		
 		override public function draw(width, height):void{
-			graphics.beginFill(0x999900);
-			graphics.drawRect(-width/2,-height/2,width, height);
+            view.graphics.beginFill(0x999900);
+            view.graphics.drawRect(-width/2,-height/2,width, height);
             textfield = new TextField();
 			textfield.text = "WALL";
 			textfield.textColor = 0xffffff;
@@ -20,7 +20,7 @@ package objects
 			textfield.width = width;
 			textfield.height = 14;
 			textfield.mouseEnabled = false;
-			addChild(textfield);
+            view.addChild(textfield);
 		}
 	}
 }
