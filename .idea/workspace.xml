@@ -7,16 +7,13 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Door.as" afterPath="$PROJECT_DIR$/src/objects/Door.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/GameObject.as" afterPath="$PROJECT_DIR$/src/objects/GameObject.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Maul.as" afterPath="$PROJECT_DIR$/src/objects/Maul.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Saw.as" afterPath="$PROJECT_DIR$/src/objects/Saw.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Tesla.as" afterPath="$PROJECT_DIR$/src/objects/Tesla.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249313555" ignored="false" />
-    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382871907380" ignored="false" />
-    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382870585487" ignored="false" />
+    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382872695966" ignored="false" />
+    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382873296135" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382870130426" ignored="false" />
     <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382867680430" ignored="false" />
@@ -86,7 +83,7 @@
       <file leaf-file-name="LevelEditor.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="344" column="8" selection-start="10485" selection-end="10485" vertical-scroll-proportion="0.0">
+            <state line="353" column="18" selection-start="10825" selection-end="10825" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,10 +98,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameObject.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="8" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+            <state line="224" column="51" selection-start="6265" selection-end="6265" vertical-scroll-proportion="0.6141176">
               <folding>
                 <element signature="e#19#47#0" expanded="true" />
               </folding>
@@ -112,10 +109,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Button.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Button.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/objects/Button.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.21176471">
+            <state line="19" column="43" selection-start="483" selection-end="514" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="e#19#47#0" expanded="true" />
               </folding>
@@ -126,7 +123,7 @@
       <file leaf-file-name="Door.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/objects/Door.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="5" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+            <state line="18" column="29" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -202,8 +199,8 @@
         <option value="$PROJECT_DIR$/src/objects/Maul.as" />
         <option value="$PROJECT_DIR$/src/LevelEditor.as" />
         <option value="$PROJECT_DIR$/src/objects/Door.as" />
-        <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
         <option value="$PROJECT_DIR$/src/objects/Button.as" />
+        <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
       </list>
     </option>
   </component>
@@ -565,7 +562,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24605452" sideWeight="0.60079575" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972974" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -689,13 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="192" column="0" selection-start="6825" selection-end="6825" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar:///Applications/Adobe Flash Builder 4.7/eclipse/plugins/com.adobe.flash.compiler_4.7.0.349722/AIRSDK/frameworks/libs/air/airglobal.swc!/library.swf">
       <provider selected="true" editor-type-id="text-editor">
         <state line="778" column="29" selection-start="34027" selection-end="34027" vertical-scroll-proportion="0.0">
@@ -724,32 +714,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="192" column="0" selection-start="6825" selection-end="6825" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="344" column="8" selection-start="10485" selection-end="10485" vertical-scroll-proportion="0.0">
+        <state line="353" column="18" selection-start="10825" selection-end="10825" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Door.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="5" selection-start="89" selection-end="89" vertical-scroll-proportion="0.0">
+        <state line="18" column="29" selection-start="521" selection-end="521" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
+    <entry file="file://$PROJECT_DIR$/src/objects/Button.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="8" selection-start="375" selection-end="375" vertical-scroll-proportion="0.0">
+        <state line="19" column="43" selection-start="483" selection-end="514" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="e#19#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Button.as">
+    <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="5" selection-start="117" selection-end="117" vertical-scroll-proportion="0.21176471">
+        <state line="224" column="51" selection-start="6265" selection-end="6265" vertical-scroll-proportion="0.6141176">
           <folding>
             <element signature="e#19#47#0" expanded="true" />
           </folding>

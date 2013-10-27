@@ -18,7 +18,7 @@ public class Button extends GameObject
             textfield = new TextField();
 			textfield.text = "BUTTON";
             textfield.textColor = 0xffffff;
-            textfield.y = - 7;
+            textfield.y = - 10;
             textfield.width = width;
             textfield.x = -width/2;
             textfield.height = 14;

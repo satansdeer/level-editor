@@ -16,7 +16,7 @@ package objects
             textfield = new TextField();
 			textfield.text = "DOOR";
 			textfield.textColor = 0xffffff;
-			textfield.y = -7;
+			textfield.y = -10;
             textfield.x = -width/2;
 			textfield.width = width;
 			textfield.height = 14;

@@ -349,7 +349,9 @@ import flash.ui.ContextMenu;
                 graphics.lineStyle(2,0xffffff);
                 graphics.moveTo(obj.x, obj.y);
                 graphics.lineTo(obj1.x, obj1.y);
-                obj.
+                obj.setConnectedObject(obj1);
+                obj1.setConnectedObject(obj);
+                //obj1 = null;
             }
         }
 	}
