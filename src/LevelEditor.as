@@ -336,8 +336,15 @@ import flash.ui.ContextMenu;
     }
 
         public function removeConnectedObject(obj:GameObject):void{
-            obj.drawChooseFriendObject();
+            if(obj.connectedObject){
+                graphics.clear();
+                redrawConnections();
+            }
     }
+
+        private function redrawConnections():void {
+
+        }
 
         public function setRotationSpeedForObject(obj:GameObject):void{
 
@@ -345,13 +352,14 @@ import flash.ui.ContextMenu;
         }
 
         public function selectedObject(obj:GameObject):void{
-            if(obj1){
+            if(obj1 && obj.canHaveConnectedObject){
                 graphics.lineStyle(2,0xffffff);
                 graphics.moveTo(obj.x, obj.y);
                 graphics.lineTo(obj1.x, obj1.y);
                 obj.setConnectedObject(obj1);
                 obj1.setConnectedObject(obj);
-                //obj1 = null;
+                obj1 = null;
+                deselectAll();
             }
         }
 	}

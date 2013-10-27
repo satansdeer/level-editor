@@ -237,14 +237,6 @@ public class GameObject extends Sprite
 
     public function setConnectedObject(obj1:GameObject):void {
         connectedObject = obj1;
-        idTextfield = new TextField();
-        idTextfield.text = obj1.id.toString();
-        idTextfield.y = -3;
-        idTextfield.width = width;
-        idTextfield.x = -width/2;
-        idTextfield.textColor = 0xffffff;
-        idTextfield.height = 14;
-        addChild(idTextfield);
     }
 }
 }
