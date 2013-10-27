@@ -13,6 +13,7 @@ import flash.events.ProgressEvent;
 import flash.filesystem.File;
 import flash.filesystem.FileMode;
 import flash.filesystem.FileStream;
+import flash.geom.Point;
 import flash.net.FileFilter;
 import flash.net.FileReference;
 import flash.text.TextField;
@@ -121,6 +122,19 @@ public class GUI extends Sprite
                 isFirstElement = false;
                 mapString += '{"type":"'+object.oType+'", "x":'+object.x+',"y":'+object.y+',"width":'+objWidth+
                         ',"height":'+objHeight+',"rotation":'+object.rotation + ', "id":'+object.id;
+                if(object.connectedObject){
+                    mapString+=', "friend":'+object.connectedObject.id;
+                }
+                if(object.canHavePath && object.pathVector){
+                    mapString+=', "walking_path":[';
+                    var isFirstPoint = true;
+                    for each (var point:Point in object.pathVector){
+                        if(!isFirstPoint){mapString+=", "}
+                        mapString+='{'+'"x":'+point.x+', "y":'+point.y+'}';
+                        isFirstPoint = false;
+                    }
+                    mapString+="]"
+                }
                 mapString+='}';
             }
             mapString+=']}';

@@ -16,7 +16,7 @@ public class GameObject extends Sprite
 		public var delegate:Object;
         public var id:int = 0;
         public var connectedObject:GameObject;
-        public var pathVector:Vector.<Point>;
+        public var pathVector:Vector.<Point> = new Vector.<Point>();
 
 		public var selected:Boolean;
 

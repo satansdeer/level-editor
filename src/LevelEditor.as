@@ -30,6 +30,7 @@ import flash.ui.ContextMenu;
 
         private var obj1:GameObject;
         private var objectForPath:GameObject;
+        private var biggestId:int = 0;
 		
 		public function LevelEditor()
 		{
@@ -119,6 +120,7 @@ import flash.ui.ContextMenu;
             }else{
                 objectForPath.pathSprite.graphics.lineStyle(2,0x00ffff);
                 objectForPath.pathSprite.graphics.lineTo(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY);
+                objectForPath.pathVector.push(new Point(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY));
             }
         }
 
@@ -188,6 +190,7 @@ import flash.ui.ContextMenu;
 			var tesla:Tesla = new Tesla("tesla");
 			tesla.x = mouseX;
 			tesla.y = mouseY;
+            tesla.id = id;
             tesla.rotation = rot;
 			tesla.delegate = this;
 			mapObjects.push(tesla);
@@ -199,6 +202,7 @@ import flash.ui.ContextMenu;
 			var button:Button = new Button("button");
 			button.x = mouseX;
 			button.y = mouseY;
+            button.id = id;
             button.rotation = rot;
 			button.delegate = this;
 			mapObjects.push(button);
@@ -210,6 +214,7 @@ import flash.ui.ContextMenu;
 			var door:Door = new Door("door");
 			door.x = mouseX;
 			door.y = mouseY;
+            door.id = id;
             door.rotation = rot;
 			door.delegate = this;
 			mapObjects.push(door);
@@ -221,6 +226,7 @@ import flash.ui.ContextMenu;
 			var saw:Saw = new Saw("saw");
 			saw.x = mouseX;
 			saw.y = mouseY;
+            saw.id = id;
             saw.rotation = rot;
 			saw.delegate = this;
 			mapObjects.push(saw);
@@ -384,6 +390,7 @@ import flash.ui.ContextMenu;
                 if(objectForPath){
                     objectForPath.pathSprite.graphics.lineStyle(2,0x00ffff);
                     objectForPath.pathSprite.graphics.lineTo(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY);
+                    objectForPath.pathVector.push(new Point(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY))
                     objectForPath = null;
                 }
             }
