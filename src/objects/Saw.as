@@ -7,6 +7,7 @@ package objects
 		public function Saw(objType:String, width:int=40, height:int=40)
 		{
 			super(objType, width, height);
+            canHavePath = true;
 		}
 		
 		override public function draw(width, height):void{

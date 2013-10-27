@@ -1,12 +1,15 @@
 package objects
 {
 	import flash.text.TextField;
+import flash.ui.GameInput;
 
-	public class Button extends GameObject
+public class Button extends GameObject
 	{
+
 		public function Button(objType:String, width:int=40, height:int=40)
 		{
 			super(objType, width, height);
+            canHaveConnectedObject = true;
 		}
 		
 		override public function draw(width, height):void{

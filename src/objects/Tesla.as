@@ -7,6 +7,8 @@ package objects
 		public function Tesla(objType:String, width:int=40, height:int=40)
 		{
 			super(objType, width, height);
+            canHavePath = true;
+            canHaveConnectedObject = true;
 		}
 		
 		override public function draw(width, height):void{

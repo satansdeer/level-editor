@@ -6,7 +6,8 @@ import flash.display.StageScaleMode;
 import flash.events.ContextMenuEvent;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
-	import flash.ui.ContextMenu;
+import flash.geom.Rectangle;
+import flash.ui.ContextMenu;
 	import flash.ui.ContextMenuItem;
 	
 	import objects.Button;
@@ -25,6 +26,8 @@ import flash.events.ContextMenuEvent;
 		private var guiLayer:Sprite;
         private const constSize:Number = 40;
         private var gui:GUI;
+
+        private var obj1:GameObject;
 		
 		public function LevelEditor()
 		{
@@ -98,14 +101,14 @@ import flash.events.ContextMenuEvent;
                 new ContextMenuItem("scale"),
                 new ContextMenuItem("delete"),
                 new ContextMenuItem("save"),
-                new ContextMenuItem("load"),
+                new ContextMenuItem("load")
 			]
 			for each (var obj:ContextMenuItem in contextMenu.items) 
 			{
 				obj.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onItemSelect);
 			}
 			
-			stage.addEventListener(MouseEvent.RIGHT_CLICK, onRightClick);
+			stage.addEventListener(MouseEvent.RIGHT_MOUSE_UP, onRightClick);
 		}
 
         private function onStageClick(event:MouseEvent):void {
@@ -296,7 +299,58 @@ import flash.events.ContextMenuEvent;
 		
 		protected function onRightClick(event:Event):void
 		{
+            contextMenu = new ContextMenu();
+            contextMenu.items = [
+                new ContextMenuItem("Set map size"),
+                new ContextMenuItem("Add wall",true),
+                new ContextMenuItem("Add maul"),
+                new ContextMenuItem("Add saw"),
+                new ContextMenuItem("Add door"),
+                new ContextMenuItem("Add button"),
+                new ContextMenuItem("Add tesla"),
+                new ContextMenuItem("rotate", true),
+                new ContextMenuItem("scale"),
+                new ContextMenuItem("delete"),
+                new ContextMenuItem("save"),
+                new ContextMenuItem("load"),
+            ]
+            for each (var obj:ContextMenuItem in contextMenu.items)
+            {
+                obj.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onItemSelect);
+            }
 			contextMenu.display(stage, stage.mouseX, stage.mouseY);
-		}
+        }
+
+        public function createPathFromObject(obj:GameObject):void{
+
+    }
+
+        public function removePathFromObject(obj:GameObject):void{
+
+
+    }
+
+        public function addConnectedObject(obj:GameObject):void{
+            obj.drawChooseFriendObject();
+            obj1 = obj;
+    }
+
+        public function removeConnectedObject(obj:GameObject):void{
+            obj.drawChooseFriendObject();
+    }
+
+        public function setRotationSpeedForObject(obj:GameObject):void{
+
+
+        }
+
+        public function selectedObject(obj:GameObject):void{
+            if(obj1){
+                graphics.lineStyle(2,0xffffff);
+                graphics.moveTo(obj.x, obj.y);
+                graphics.lineTo(obj1.x, obj1.y);
+                obj.
+            }
+        }
 	}
 }

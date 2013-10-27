@@ -7,6 +7,7 @@ package objects
 		public function Door(objType:String, width:int=40, height:int=40)
 		{
 			super(objType, width, height);
+            canHaveConnectedObject = true;
 		}
 		
 		override public function draw(width, height):void{
@@ -22,5 +23,6 @@ package objects
 			textfield.mouseEnabled = false;
 			addChild(textfield);
 		}
+
 	}
 }

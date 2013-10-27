@@ -7,6 +7,8 @@ package objects
 		public function Maul(objType:String, width:int=40, height:int=40)
 		{
 			super(objType, width, height);
+            canHavePath = true;
+            hasRotationSpeed = true;
 		}
 		
 		override public function draw(width, height):void{
