@@ -3,14 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/GameObject.as" afterPath="$PROJECT_DIR$/src/objects/GameObject.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1381249313555" ignored="false" />
-    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382885055698" ignored="false" />
-    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382873296135" ignored="false" />
+    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382885884976" ignored="false" />
+    <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382885897984" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1380039920454" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382870130426" ignored="false" />
     <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1382867680430" ignored="false" />
@@ -77,10 +78,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="LevelEditor.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="LevelEditor.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="353" column="62" selection-start="10954" selection-end="10954" vertical-scroll-proportion="0.79058826">
+            <state line="357" column="15" selection-start="11124" selection-end="11124" vertical-scroll-proportion="-10.769231">
               <folding />
             </state>
           </provider>
@@ -95,10 +96,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameObject.as" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GameObject.as" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="13" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+            <state line="104" column="37" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.8258824">
               <folding>
                 <element signature="e#19#47#0" expanded="true" />
               </folding>
@@ -196,8 +197,8 @@
         <option value="$PROJECT_DIR$/src/objects/Maul.as" />
         <option value="$PROJECT_DIR$/src/objects/Door.as" />
         <option value="$PROJECT_DIR$/src/objects/Button.as" />
-        <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
         <option value="$PROJECT_DIR$/src/LevelEditor.as" />
+        <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
       </list>
     </option>
   </component>
@@ -545,7 +546,7 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39920425" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2496361" sideWeight="0.45405406" order="2" side_tool="true" content_ui="tabs" />
@@ -734,19 +735,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
+    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="13" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#19#47#0" expanded="true" />
-          </folding>
+        <state line="357" column="15" selection-start="11124" selection-end="11124" vertical-scroll-proportion="-10.769231">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
+    <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="353" column="62" selection-start="10954" selection-end="10954" vertical-scroll-proportion="0.79058826">
-          <folding />
+        <state line="104" column="37" selection-start="3421" selection-end="3421" vertical-scroll-proportion="0.8258824">
+          <folding>
+            <element signature="e#19#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

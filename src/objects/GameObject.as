@@ -3,6 +3,7 @@ package objects
 	import flash.display.Sprite;
 import flash.events.ContextMenuEvent;
 import flash.events.MouseEvent;
+import flash.geom.Point;
 import flash.text.TextField;
 import flash.ui.ContextMenu;
 import flash.ui.ContextMenuItem;
@@ -14,6 +15,7 @@ public class GameObject extends Sprite
 		public var delegate:Object;
         public var id:int = 0;
         public var connectedObject:GameObject;
+        public var pathVector:Vector.<Point>;
 
 		public var selected:Boolean;
 
@@ -24,12 +26,14 @@ public class GameObject extends Sprite
     public var canHavePath:Boolean = false;
     public var hasRotationSpeed:Boolean = false;
     public var canHaveConnectedObject:Boolean = false;
+    public const pathSprite:Sprite = new Sprite();
 		
 		public function GameObject(objType:String, width:int=40, height:int = 40)
 		{
 			super();
 			selection = new Sprite();
 			addChild(selection);
+            addChild(pathSprite);
 			oType = objType;
 			draw(width, height);
             addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
@@ -98,6 +102,7 @@ public class GameObject extends Sprite
         stopDrag();
         event.stopPropagation();
         event.stopImmediatePropagation();
+        delegate.redrawConnections();
     }
 
         public function deleteSelf():void{

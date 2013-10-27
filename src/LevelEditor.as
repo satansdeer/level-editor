@@ -6,6 +6,7 @@ import flash.display.StageScaleMode;
 import flash.events.ContextMenuEvent;
 	import flash.events.Event;
 	import flash.events.MouseEvent;
+import flash.geom.Point;
 import flash.geom.Rectangle;
 import flash.ui.ContextMenu;
 	import flash.ui.ContextMenuItem;
@@ -28,6 +29,7 @@ import flash.ui.ContextMenu;
         private var gui:GUI;
 
         private var obj1:GameObject;
+        private var objectForPath:GameObject;
 		
 		public function LevelEditor()
 		{
@@ -112,7 +114,12 @@ import flash.ui.ContextMenu;
 		}
 
         private function onStageClick(event:MouseEvent):void {
-            deselectAll();
+            if(!objectForPath){
+                deselectAll();
+            }else{
+                objectForPath.pathSprite.graphics.lineStyle(2,0x00ffff);
+                objectForPath.pathSprite.graphics.lineTo(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY);
+            }
         }
 
         protected function uniqueId():int{
@@ -322,8 +329,12 @@ import flash.ui.ContextMenu;
         }
 
         public function createPathFromObject(obj:GameObject):void{
-
-    }
+             if(!obj.pathVector){
+                 obj.pathVector = new Vector.<Point>();
+             }
+             objectForPath = obj;
+            graphics.moveTo(obj.x, obj.y);
+        }
 
         public function removePathFromObject(obj:GameObject):void{
 
@@ -344,7 +355,8 @@ import flash.ui.ContextMenu;
             }
     }
 
-        private function redrawConnections():void {
+        public function redrawConnections():void {
+            graphics.clear();
             for each (var obj:GameObject in mapObjects){
                 if(obj.connectedObject){
                     graphics.lineStyle(2,0xffffff);
@@ -368,6 +380,12 @@ import flash.ui.ContextMenu;
                 obj1.setConnectedObject(obj);
                 obj1 = null;
                 deselectAll();
+            }else{
+                if(objectForPath){
+                    objectForPath.pathSprite.graphics.lineStyle(2,0x00ffff);
+                    objectForPath.pathSprite.graphics.lineTo(objectForPath.pathSprite.mouseX, objectForPath.pathSprite.mouseY);
+                    objectForPath = null;
+                }
             }
         }
 	}
