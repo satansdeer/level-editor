@@ -338,12 +338,20 @@ import flash.ui.ContextMenu;
         public function removeConnectedObject(obj:GameObject):void{
             if(obj.connectedObject){
                 graphics.clear();
+                obj.connectedObject.connectedObject = null;
+                obj.connectedObject = null;
                 redrawConnections();
             }
     }
 
         private function redrawConnections():void {
-
+            for each (var obj:GameObject in mapObjects){
+                if(obj.connectedObject){
+                    graphics.lineStyle(2,0xffffff);
+                    graphics.moveTo(obj.x, obj.y);
+                    graphics.lineTo(obj.connectedObject.x, obj.connectedObject.y);
+                }
+            }
         }
 
         public function setRotationSpeedForObject(obj:GameObject):void{
