@@ -1,6 +1,7 @@
 package objects
 {
-	import flash.display.Sprite;
+import flash.display.DisplayObject;
+import flash.display.Sprite;
 import flash.events.ContextMenuEvent;
 import flash.events.MouseEvent;
 import flash.geom.Point;
@@ -11,7 +12,7 @@ import flash.ui.ContextMenuItem;
 public class GameObject extends Sprite
 	{
 		public var oType:String;
-		public var selection:Sprite;
+		public var selection:Sprite = new Sprite();
         public var view:Sprite = new Sprite();
 		public var delegate:Object;
         public var id:int = 0;
@@ -28,20 +29,53 @@ public class GameObject extends Sprite
     public var hasRotationSpeed:Boolean = false;
     public var canHaveConnectedObject:Boolean = false;
     public const pathSprite:Sprite = new Sprite();
+    public var textView:Sprite = new Sprite();
 		
-		public function GameObject(objType:String, width:int=40, height:int = 40)
-		{
-			super();
-			selection = new Sprite();
-			addChild(selection);
-            addChild(pathSprite);
-            addChild(view);
-			oType = objType;
-			draw(width, height);
-            addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
-            addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
-            addEventListener(MouseEvent.RIGHT_MOUSE_UP, onRightClick);
-		}
+	public function GameObject()
+	{
+		super();
+        addChild(view);
+		addChild(selection);
+        addChild(pathSprite);
+        addChild(textView);
+        addEventListener(MouseEvent.MOUSE_DOWN, onMouseDown);
+        addEventListener(MouseEvent.MOUSE_UP, onMouseUp);
+        addEventListener(MouseEvent.RIGHT_MOUSE_UP, onRightClick);
+	}
+
+    public static function getGameObjByType(type:String):GameObject{
+         switch(type){
+             case "wall":
+                 return new Wall();
+                 break;
+             case "maul":
+                 return new Maul();
+                 break;
+             case "tesla":
+                 return new Tesla();
+                 break;
+             case "saw":
+                 return new Saw();
+                 break;
+             case "door":
+                 return new Door();
+                 break;
+             case "button":
+                 return new Button();
+                 break;
+             default:
+                 return null;
+                 break;
+         }
+    }
+
+    public function initFromJSON(obj:Object):void{
+        oType = obj["type"];
+        x = obj["x"];
+        y = obj["y"];
+        id = obj["id"];
+        rotation = obj["rotation"];
+    }
 
     public function onRightClick(event:MouseEvent):void {
         event.stopPropagation();
@@ -238,9 +272,14 @@ public class GameObject extends Sprite
         }
 		
 		public function draw(width, height):void{
+            view.graphics.clear();
             view.graphics.beginFill(0x00ff00);
             view.graphics.drawCircle(0,0,width/2);
 		}
+
+    public function update():void{
+        draw(40,40);
+    }
 
     public function setConnectedObject(obj1:GameObject):void {
         connectedObject = obj1;

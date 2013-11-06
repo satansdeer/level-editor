@@ -4,25 +4,31 @@ package objects
 
 	public class Maul extends GameObject
 	{
-		public function Maul(objType:String, width:int=40, height:int=40)
+		public function Maul()
 		{
-			super(objType, width, height);
+			super();
             canHavePath = true;
             hasRotationSpeed = true;
+            initTextField();
+            oType = "maul";
 		}
-		
-		override public function draw(width, height):void{
-            view.graphics.beginFill(0x009999);
-            view.graphics.drawCircle(0,0,width/2);
+
+        protected function initTextField():void{
             textfield = new TextField();
-			textfield.text = "MAUL";
+            textfield.text = "BUTTON";
             textfield.textColor = 0xffffff;
-            textfield.y = - 7;
+            textfield.y = - 10;
             textfield.width = width;
             textfield.x = -width/2;
             textfield.height = 14;
             textfield.mouseEnabled = false;
-            view.addChild(textfield);
+            textView.addChild(textfield);
+        }
+		
+		override public function draw(width, height):void{
+            view.graphics.clear();
+            view.graphics.beginFill(0x009999);
+            view.graphics.drawCircle(0,0,width/2);
 		}
 	}
 }

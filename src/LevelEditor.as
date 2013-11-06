@@ -31,12 +31,23 @@ import flash.ui.ContextMenu;
         private var obj1:GameObject;
         private var objectForPath:GameObject;
         private var biggestId:int = 0;
+        private var mapLoader:MapLoader;
 		
 		public function LevelEditor()
 		{
 			mapObjects = new Array();
+            mapLoader = new MapLoader();
+            mapLoader.delegate = this;
 			addEventListener(Event.ADDED_TO_STAGE, onAddedToStage);
 		}
+
+        public function saveMap():void{
+            mapLoader.saveFile();
+        }
+
+        public function loadMap():void{
+            mapLoader.loadFile();
+        }
 
         public function loadFromString(str:String):void{
             for each(var object:GameObject in mapObjects){
@@ -47,72 +58,50 @@ import flash.ui.ContextMenu;
             var jsonMap:Object = JSON.parse(str);
             var objects:Array = jsonMap["objects"];
             for each (var obj:Object in objects){
-                createObject(obj);
+                createObjectFromJson(obj);
             }
         }
 
-        protected function createObject(obj:Object):void{
-            switch(obj["type"]){
-                case "wall":
-                    addWall(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                    break;
-                case "maul":
-                    addMaul(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                    break;
-                case "tesla":
-                    addTesla(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                    break;
-                case "saw":
-                    addSaw(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                    break;
-                case "door":
-                    addDoor(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                    break;
-                case "button":
-                    addButton(obj["id"],obj["x"], obj["y"], obj["rotation"], obj["width"]/constSize);
-                break;
-                default:
-                break;
-            }
+        protected function createObjectFromJson(obj:Object):void{
+            var mapObj:GameObject = GameObject.getGameObjByType(obj["type"]);
+            mapObj.initFromJSON(obj);
+            mapObj.delegate = this;
+            mapObjects.push(mapObj);
+            objectsLayer.addChild(mapObj);
+        }
+
+        protected function makeNewObject(type:String):void{
+            var mapObj:GameObject = GameObject.getGameObjByType(type);
+            mapObj.id = uniqueId();
+            mapObj.x = stage.mouseX;
+            mapObj.y = stage.mouseY;
+            mapObj.delegate = this;
+            mapObjects.push(mapObj);
+            objectsLayer.addChild(mapObj);
         }
 
 		protected function onAddedToStage(event:Event):void
 		{
-            stage.addEventListener(MouseEvent.MOUSE_UP, onStageClick);
             stage.scaleMode = StageScaleMode.NO_SCALE;
             stage.align = StageAlign.TOP_LEFT;
 			objectsLayer = new Sprite();
 			guiLayer = new Sprite();
 			addChild(objectsLayer);
 			addChild(guiLayer);
-			
 			gui = new GUI(stage);
 			gui.delegate = this;
 			guiLayer.addChild(gui);
-			
-			
-			contextMenu = new ContextMenu();
-			contextMenu.items = [
-				new ContextMenuItem("Set map size"),
-				new ContextMenuItem("Add wall",true),
-				new ContextMenuItem("Add maul"),
-				new ContextMenuItem("Add saw"),
-				new ContextMenuItem("Add door"),
-				new ContextMenuItem("Add button"),
-				new ContextMenuItem("Add tesla"),
-                new ContextMenuItem("rotate", true),
-                new ContextMenuItem("scale"),
-                new ContextMenuItem("delete"),
-                new ContextMenuItem("save"),
-                new ContextMenuItem("load")
-			]
-			for each (var obj:ContextMenuItem in contextMenu.items) 
-			{
-				obj.addEventListener(ContextMenuEvent.MENU_ITEM_SELECT, onItemSelect);
-			}
-			
+            stage.addEventListener(MouseEvent.MOUSE_UP, onStageClick);
 			stage.addEventListener(MouseEvent.RIGHT_MOUSE_UP, onRightClick);
+            addEventListener(Event.ENTER_FRAME, onEnterFrame);
 		}
+
+        public function onEnterFrame(event:Event):void{
+            for (var i:int = 0; i< mapObjects.length; i++){
+                (mapObjects[i] as GameObject).update();
+            }
+            redrawConnections();
+        }
 
         private function onStageClick(event:MouseEvent):void {
             if(!objectForPath){
@@ -144,26 +133,23 @@ import flash.ui.ContextMenu;
 		protected function onItemSelect(event:ContextMenuEvent):void
 		{
 			switch(event.target.caption){
-                case "Set map size":
-                    gui.openMapWindow();
-                    break;
 				case "Add wall":
-					addWall(uniqueId(),stage.mouseX, stage.mouseY);
+					makeNewObject("wall");
 					break;
 				case "Add maul":
-					addMaul(uniqueId(),stage.mouseX, stage.mouseY);
+                    makeNewObject("maul");
 					break;
 				case "Add saw":
-					addSaw(uniqueId(),stage.mouseX, stage.mouseY);
+                    makeNewObject("saw");
 					break;
 				case "Add door":
-					addDoor(uniqueId(),stage.mouseX, stage.mouseY);
+                    makeNewObject("door");
 					break;
 				case "Add button":
-					addButton(uniqueId(),stage.mouseX, stage.mouseY);
+                    makeNewObject("button");
 					break;
 				case "Add tesla":
-					addTesla(uniqueId(),stage.mouseX, stage.mouseY);
+                    makeNewObject("tesla");
 					break;
                 case "rotate":
                     gui.onClickRotate();
@@ -183,79 +169,6 @@ import flash.ui.ContextMenu;
 				default:
 					break;
 			}
-		}
-		
-		private function addTesla(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var tesla:Tesla = new Tesla("tesla");
-			tesla.x = mouseX;
-			tesla.y = mouseY;
-            tesla.id = id;
-            tesla.rotation = rot;
-			tesla.delegate = this;
-			mapObjects.push(tesla);
-			objectsLayer.addChild(tesla);
-		}
-		
-		private function addButton(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var button:Button = new Button("button");
-			button.x = mouseX;
-			button.y = mouseY;
-            button.id = id;
-            button.rotation = rot;
-			button.delegate = this;
-			mapObjects.push(button);
-			objectsLayer.addChild(button);
-		}
-		
-		private function addDoor(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var door:Door = new Door("door");
-			door.x = mouseX;
-			door.y = mouseY;
-            door.id = id;
-            door.rotation = rot;
-			door.delegate = this;
-			mapObjects.push(door);
-			objectsLayer.addChild(door);
-		}
-		
-		private function addSaw(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var saw:Saw = new Saw("saw");
-			saw.x = mouseX;
-			saw.y = mouseY;
-            saw.id = id;
-            saw.rotation = rot;
-			saw.delegate = this;
-			mapObjects.push(saw);
-			objectsLayer.addChild(saw);
-		}
-		
-		private function addMaul(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var maul:Maul = new Maul("maul");
-			maul.x = mouseX;
-			maul.delegate = this;
-			maul.y = mouseY;
-            maul.rotation = rot;
-            maul.id = id;
-			mapObjects.push(maul);
-			objectsLayer.addChild(maul);
-		}
-		
-		private function addWall(id:int, mouseX:Number, mouseY:Number, rot:Number = 0, objSize:Number = 1):void
-		{
-			var wall:Wall = new Wall("wall");
-			wall.x = mouseX;
-			wall.y = mouseY;
-            wall.id = id;
-            wall.rotation = rot;
-            wall.scaleX = wall.scaleY = objSize;
-			wall.delegate = this;
-			mapObjects.push(wall);
-			objectsLayer.addChild(wall);
 		}
 		
 		public function deselectAll():void{
@@ -373,7 +286,6 @@ import flash.ui.ContextMenu;
         }
 
         public function setRotationSpeedForObject(obj:GameObject):void{
-
 
         }
 

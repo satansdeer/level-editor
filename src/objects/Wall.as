@@ -4,23 +4,29 @@ package objects
 
 	public class Wall extends GameObject
 	{
-		public function Wall(objType:String, width:int=40, height:int = 40)
+		public function Wall()
 		{
-			super(objType, width, height);
+			super();
+            initTextField();
+            oType = "wall";
 		}
+
+        protected function initTextField():void{
+            textfield = new TextField();
+            textfield.text = "BUTTON";
+            textfield.textColor = 0xffffff;
+            textfield.y = - 10;
+            textfield.width = 40;
+            textfield.x = -width/2;
+            textfield.height = 14;
+            textfield.mouseEnabled = false;
+            textView.addChild(textfield);
+        }
 		
 		override public function draw(width, height):void{
+            view.graphics.clear();
             view.graphics.beginFill(0x999900);
             view.graphics.drawRect(-width/2,-height/2,width, height);
-            textfield = new TextField();
-			textfield.text = "WALL";
-			textfield.textColor = 0xffffff;
-			textfield.y = -7;
-            textfield.x = -width/2;
-			textfield.width = width;
-			textfield.height = 14;
-			textfield.mouseEnabled = false;
-            view.addChild(textfield);
 		}
 	}
 }
