@@ -2,34 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="959194f0-e24f-45e7-b170-8ed590d7eb58" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MapLoader.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ObjectsPanel.as" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/ParametersPanel.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" afterPath="$PROJECT_DIR$/bin-debug/LevelEditor.swf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Button.as" afterPath="$PROJECT_DIR$/src/objects/Button.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Door.as" afterPath="$PROJECT_DIR$/src/objects/Door.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/GUI.as" afterPath="$PROJECT_DIR$/src/GUI.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/GameObject.as" afterPath="$PROJECT_DIR$/src/objects/GameObject.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/LevelEditor.as" afterPath="$PROJECT_DIR$/src/LevelEditor.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Maul.as" afterPath="$PROJECT_DIR$/src/objects/Maul.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Saw.as" afterPath="$PROJECT_DIR$/src/objects/Saw.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Tesla.as" afterPath="$PROJECT_DIR$/src/objects/Tesla.as" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/objects/Wall.as" afterPath="$PROJECT_DIR$/src/objects/Wall.as" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="LevelEditor.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383750169785" ignored="false" />
-    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383750205356" ignored="false" />
+    <file path="/GUI.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383840232840" ignored="false" />
+    <file path="/LevelEditor.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383839994325" ignored="false" />
     <file path="/GameObject.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748302432" ignored="false" />
     <file path="/Wall.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383750467079" ignored="false" />
     <file path="/Button.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748306945" ignored="false" />
-    <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383747194898" ignored="false" />
+    <file path="/Dummy.txt" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383838899271" ignored="false" />
     <file path="/Saw.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748408340" ignored="false" />
     <file path="/Tesla.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748462958" ignored="false" />
     <file path="/Maul.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748323192" ignored="false" />
     <file path="/Door.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383748315828" ignored="false" />
-    <file path="$PROJECT_DIR$/bin-debug/LevelEditor-app.xml" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383749123385" ignored="false" />
-    <file path="/fragment.js2" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383749246344" ignored="false" />
+    <file path="/fragment.js2" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383840124569" ignored="false" />
     <file path="/MapLoader.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383749916895" ignored="false" />
+    <file path="/ObjectsPanel.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383839491938" ignored="false" />
+    <file path="/ParametersPanel.as" changelist="959194f0-e24f-45e7-b170-8ed590d7eb58" time="1383840303573" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,8 +88,19 @@
       <file leaf-file-name="LevelEditor.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="53" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.0">
+            <state line="30" column="37" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ParametersPanel.as" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ParametersPanel.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="55" selection-start="618" selection-end="618" vertical-scroll-proportion="0.49586776">
+              <folding>
+                <element signature="e#177#217#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -103,9 +109,7 @@
         <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="48" column="29" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#18#53#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -128,24 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Maul.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objects/Maul.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="25" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Saw.as" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/objects/Saw.as">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="24" selection-start="215" selection-end="215" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Tesla.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/objects/Tesla.as">
           <provider selected="true" editor-type-id="text-editor">
@@ -155,11 +141,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wall.as" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Wall.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/objects/Wall.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="12" selection-start="172" selection-end="187" vertical-scroll-proportion="0.3125">
+            <state line="15" column="69" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ObjectsPanel.as" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ObjectsPanel.as">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="60" selection-start="0" selection-end="1258" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#177#217#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -167,7 +164,7 @@
       <file leaf-file-name="GUI.as" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/GUI.as">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="31" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0">
+            <state line="42" column="34" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -177,9 +174,7 @@
         <entry file="file://$PROJECT_DIR$/src/MapLoader.as">
           <provider selected="true" editor-type-id="text-editor">
             <state line="93" column="59" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#177#203#0" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -203,8 +198,6 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/objects/GameObject.as" />
-        <option value="$PROJECT_DIR$/src/GUI.as" />
-        <option value="$PROJECT_DIR$/src/LevelEditor.as" />
         <option value="$PROJECT_DIR$/src/MapLoader.as" />
         <option value="$PROJECT_DIR$/src/objects/Wall.as" />
         <option value="$PROJECT_DIR$/src/objects/Button.as" />
@@ -212,14 +205,16 @@
         <option value="$PROJECT_DIR$/src/objects/Maul.as" />
         <option value="$PROJECT_DIR$/src/objects/Saw.as" />
         <option value="$PROJECT_DIR$/src/objects/Tesla.as" />
+        <option value="$PROJECT_DIR$/src/ObjectsPanel.as" />
+        <option value="$PROJECT_DIR$/src/LevelEditor.as" />
+        <option value="$PROJECT_DIR$/src/GUI.as" />
+        <option value="$PROJECT_DIR$/src/ParametersPanel.as" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="4" />
-    <option name="y" value="22" />
-    <option name="width" value="1436" />
-    <option name="height" value="878" />
+    <option name="width" value="1440" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -249,7 +244,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
@@ -283,26 +277,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelEditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="LevelEditor" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="objects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -315,7 +292,7 @@
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
-    <property name="FullScreen" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
@@ -353,19 +330,6 @@
       <option name="trusted" value="true" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -392,6 +356,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -557,7 +534,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="4" y="22" width="1436" height="878" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -565,20 +542,20 @@
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39161676" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39135382" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32934132" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23816156" sideWeight="0.6706587" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3233533" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32309443" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814372" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24930362" sideWeight="0.6706587" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23816156" sideWeight="0.60838324" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2375" sideWeight="0.6086462" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32891247" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -654,20 +631,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/objects/Maul.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="362" selection-end="362" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Saw.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="21" selection-start="361" selection-end="361" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Tesla.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="21" selection-start="364" selection-end="364" vertical-scroll-proportion="0.0">
@@ -696,35 +659,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/GUI.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="31" selection-start="1008" selection-end="1008" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MapLoader.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="93" column="59" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#177#203#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="53" selection-start="2206" selection-end="2206" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/GameObject.as">
       <provider selected="true" editor-type-id="text-editor">
         <state line="48" column="29" selection-start="1518" selection-end="1518" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#18#53#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -735,18 +673,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/objects/Door.as">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="25" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Maul.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="25" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="12" column="25" selection-start="254" selection-end="254" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Saw.as">
@@ -765,8 +694,54 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/objects/Wall.as">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="12" selection-start="172" selection-end="187" vertical-scroll-proportion="0.3125">
+        <state line="15" column="69" selection-start="321" selection-end="321" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/objects/Door.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="228" selection-end="228" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/MapLoader.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="93" column="59" selection-start="3700" selection-end="3700" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LevelEditor.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="37" selection-start="823" selection-end="823" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ObjectsPanel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="60" selection-start="0" selection-end="1258" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#177#217#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/GUI.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="42" column="34" selection-start="1274" selection-end="1274" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ParametersPanel.as">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="55" selection-start="618" selection-end="618" vertical-scroll-proportion="0.49586776">
+          <folding>
+            <element signature="e#177#217#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

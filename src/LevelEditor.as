@@ -19,7 +19,7 @@ import flash.ui.ContextMenu;
 	import objects.Tesla;
 	import objects.Wall;
 
-    [SWF(backgroundColor="#000000", frameRate="100")]
+    [SWF(backgroundColor="#f0f0f0", frameRate="30", width="700", height="500")]
 	public class LevelEditor extends Sprite
 	{
 		public var mapObjects:Array;
@@ -88,7 +88,7 @@ import flash.ui.ContextMenu;
 			guiLayer = new Sprite();
 			addChild(objectsLayer);
 			addChild(guiLayer);
-			gui = new GUI(stage);
+			gui = new GUI(this,stage);
 			gui.delegate = this;
 			guiLayer.addChild(gui);
             stage.addEventListener(MouseEvent.MOUSE_UP, onStageClick);

@@ -28,12 +28,21 @@ public class GUI extends Sprite
 		public var delegate:Object;
         private var _stage:Stage;
         private var _currentWindow:Window;
+    private var bottomPanel:ObjectsPanel;
+    private var rightPanel:ParametersPanel;
 		
-		public function GUI(stg:Stage)
+		public function GUI(delegate:Object, stg:Stage)
 		{
 			super();
             _stage = stg;
+            this.delegate = delegate;
 			stg.addEventListener(KeyboardEvent.KEY_DOWN, onKeyDown);
+            bottomPanel = new ObjectsPanel(this, stg.stageWidth, 100);
+            bottomPanel.y = stg.stageHeight - bottomPanel.height;
+            addChild(bottomPanel);
+            rightPanel = new ParametersPanel(this, 200, stg.stageHeight);
+            rightPanel.x = stg.stageWidth - rightPanel.width;
+            addChild(rightPanel);
 		}
 
         public function onClickLoad():void {
